@@ -8,9 +8,9 @@
       
       <div class="demo-info">
         <div class="demo-title">Cuentas de prueba:</div>
-        <div class="demo-item">Docente: docente@escuela.com / 123456</div>
-        <div class="demo-item">Estudiante: estudiante@gmail.com / 123456</div>
-        <div class="demo-item">Administrador: admin@gmail.com / 123456</div>
+        <div class="demo-item">Docente: crearse un usuario con admin / 123456</div>
+        <div class="demo-item">Estudiante: crearse un usuario con admin / 123456</div>
+        <div class="demo-item">Administrador: admin@escuela.com / 123456</div>
       </div>
 
       <form @submit.prevent="handleLogin" class="login-form">
