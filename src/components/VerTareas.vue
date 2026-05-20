@@ -65,10 +65,18 @@ onMounted(() => {
   cargarTareas()
 })
 
-const cargarTareas = () => {
-  const stored = localStorage.getItem('tareas')
-  if (stored) {
-    tareas.value = JSON.parse(stored)
+const cargarTareas = async () => {
+  try {
+    const res = await fetch('http://localhost/api/tareas/tareas/estudiante')
+    const data = await res.json()
+
+    if (data.ok) {
+      tareas.value = data.tareas
+    } else {
+      console.error(data.message)
+    }
+  } catch (error) {
+    console.error('Error cargando tareas:', error)
   }
 }
 
